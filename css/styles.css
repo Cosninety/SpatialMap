@@ -1,0 +1,19 @@
+#header {
+  height:75px;
+  background-color: indianred;
+}
+
+#mapdiv {
+  height:600px;
+  background-color: seagreen;
+}
+
+#side_panel {
+  height:600px;
+  background-color: coral;
+}
+
+#footer{
+  height: 75px;
+  background-color: burlywood;
+}

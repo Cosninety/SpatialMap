@@ -1,0 +1,75 @@
+<!-- Citation: The foundation/boilerplate of project webpage follows 'The introduction to Webprogramming for GIS' Udemy course https://www.udemy.com/introduction-to-web-programming-for-gis-applications/learn/lecture/6518018#overview
+
+Other reference resources include:
+https://leafletjs.com/examples/quick-start/
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Spatial Mapping</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+
+    <!-- type link then enter -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin=""></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+ <!-- bootstrap class col-md-x -->
+<!--
+the row class seems to align squares side by side.. look this up -->
+<div class = "row">
+  <div id="header" class="col-md-12">
+    <h1 class ="text-center">World Map4</h1>
+  </div>
+
+  <div id="side_panel" class="col-md-3">
+    <h1 class ="text-center">Highlights2</h1>
+  </div>
+  <div id="mapdiv" class="col-md-9"></div>
+
+  <div id="footer" class="col-md-12">
+    <h4 id="map_coordinates" class ="text-center">Latitude:19.4 Longitude:-99.1 Zoom Level:11 </h4>
+  <h4 class ="text-center">&copy;2019 <a href="http://noah-garcia.com">Noah Garcia</a> </h4>
+  </div>
+</div>
+
+<script>
+  var mymap = L.map('mapdiv')
+  mymap.setView([19.4, -99.1],11);
+
+  var backgroundLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');mymap.addLayer(backgroundLayer);
+
+
+// L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+//
+//   id: 'mapbox.streets',
+//   accessToken: 'pk.eyJ1IjoiY29zbmluZXR5IiwiYSI6ImNqdndnYWlsbDRjdXczeXVpOHcwams2ZzAifQ.0A-o5K0CizIOHFvKwbL7Ow'
+// }).addTo(mymap);
+
+</script>
+
+
+</body>
+</html>
+
+<!-- Notes:
+Need to go through xamp exercise to create web server for ajax -->
