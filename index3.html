@@ -1,4 +1,4 @@
-<!-- Citation: The foundation/boilerplate of map webpage follows 'The introduction to Webprogramming for GIS' Udemy course https://www.udemy.com/introduction-to-web-programming-for-gis-applications/learn/lecture/6518018#overview
+<!-- Citation: The foundation/boilerplate of project webpage follows 'The introduction to Webprogramming for GIS' Udemy course https://www.udemy.com/introduction-to-web-programming-for-gis-applications/learn/lecture/6518018#overview
 
 Other reference resources include:
 https://leafletjs.com/examples/quick-start/
@@ -21,6 +21,8 @@ https://leafletjs.com/examples/quick-start/
   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
   crossorigin=""/>
 
+  <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" /> -->
+
     <!-- type link then enter -->
   <link rel="stylesheet" href="css/styles.css">
 
@@ -29,6 +31,17 @@ https://leafletjs.com/examples/quick-start/
   crossorigin=""></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
+  <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+  <script src="catiline.js"></script>
+  <script src="leaflet.shpfile.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+
 
 </head>
 <body>
@@ -37,43 +50,34 @@ https://leafletjs.com/examples/quick-start/
 <!--
 the row class seems to align squares side by side.. look this up -->
 <div class = "row">
-
-
   <div id="header" class="col-md-12">
-    <a class="btn btn-primary" href="about.html" role="button">About</a>
-    <a class="btn btn-primary" href="contact.html" role="button">Contact</a>
+    <h1 class ="text-center">World Map4</h1>
   </div>
-
-    <div id="header1" class="col-md-12">
-      <h1 class ="text-center">Interactive Map - W.I.P.</h1>
-    </div>
-
 
   <div id="side_panel" class="col-md-3">
-    <h1 class ="text-center">Map selection options</h1>
+    <h1 class ="text-center">Highlights2</h1>
   </div>
-
   <div id="mapdiv" class="col-md-9"></div>
 
   <div id="footer" class="col-md-12">
-    <h4 id="map_coordinates" class ="text-center">Latitude: 42.2808 Longitude: -83.7430 Zoom Level:11 </h4>
+    <h4 id="map_coordinates" class ="text-center">Latitude:19.4 Longitude:-99.1 Zoom Level:11 </h4>
   <h4 class ="text-center">&copy;2019 <a href="http://noah-garcia.com">Noah Garcia</a> </h4>
   </div>
 </div>
 
 <script>
   var mymap = L.map('mapdiv')
-  mymap.setView([42.2808, -83.7430],11);
+  mymap.setView([19.4, -99.1],11);
 
-// create several buttons, which change map if clicked
   var backgroundLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');mymap.addLayer(backgroundLayer);
-  // var backgroundLayer1 = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');mymap.addLayer(backgroundLayer1);
+  // var shpfile = new L.Shapefile("greenbelt_open_data_shapefiles.zip"); shpfile.addTo(mymap);
+  var shpfile = new L.Shapefile("greenbelt_open_data_shapefiles.zip"); shpfile.addTo(backgroundLayer);
 
+// L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 //
-// https://{s}.basemaps.cartocdn.com/{basemap_id}/{z}/{x}/{y}.png
-// var backgroundLayer = L.tileLayer('http://{s}.basemaps.cartocdn.com/{base-dark}/{z}/{x}/{y}.png');mymap.addLayer(backgroundLayer);
-// var backgroundLayer = L.tileLayer('https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer);mymap.addLayer(backgroundLayer);
-
+//   id: 'mapbox.streets',
+//   accessToken: 'pk.eyJ1IjoiY29zbmluZXR5IiwiYSI6ImNqdndnYWlsbDRjdXczeXVpOHcwams2ZzAifQ.0A-o5K0CizIOHFvKwbL7Ow'
+// }).addTo(mymap);
 
 </script>
 

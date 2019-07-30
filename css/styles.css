@@ -1,19 +1,35 @@
 #header {
   height:75px;
-  background-color: indianred;
+  background-color: black;
+}
+
+#header1 {
+  height:75px;
+  background-color: black;
 }
 
 #mapdiv {
   height:600px;
-  background-color: seagreen;
+  background-color: blue;
 }
 
 #side_panel {
   height:600px;
-  background-color: coral;
+  background-color: black;
 }
 
 #footer{
   height: 75px;
-  background-color: burlywood;
+  background-color: black;
+}
+.btn {
+  color: white;
+}
+
+.btn-primary{
+  color: white;
+}
+
+.text-center{
+  color: white;
 }
