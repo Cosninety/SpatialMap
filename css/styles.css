@@ -38,7 +38,10 @@
 }
 
 #footer{
-  height: 120px;
+  margin: auto;
+  padding: 5px;
+  min-height: 75px;
+  overflow:hidden;
   background-color: black;
 }
 .btn {
