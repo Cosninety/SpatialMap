@@ -62,6 +62,11 @@
 
 .text-center{
   color: white;
+  margin: auto;
+  font-weight: bold;
+  padding: 5px;
+  min-height: 75px;
+  overflow:hidden;
 }
 
 /* .vertcenter {
