@@ -3,15 +3,22 @@
   background-color: black;
 }
 
+
 #header {
   height:50px;
   background-color: black;
 }
 
 #header1 {
-  height:75px;
+  margin: auto;
+  font-weight: bold;
+  padding: 5px;
+  min-height: 75px;
+  overflow:hidden;
   background-color: black;
 }
+
+
 
 #mapdiv {
   height:500px;
@@ -31,7 +38,7 @@
 }
 
 #footer{
-  height: 75px;
+  height: 120px;
   background-color: black;
 }
 .btn {
@@ -42,8 +49,25 @@
   color: white;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image{
+  height: 140px;
+  background-color: black;
+}
+
 .text-center{
   color: white;
+}
+
+.vertcenter {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .general_body {
