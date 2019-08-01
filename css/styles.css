@@ -4,7 +4,7 @@
 }
 
 
-#buttons {
+#button {
   height:50px;
   background-color: black;
 }
@@ -52,10 +52,12 @@
 
 .btn {
   color: white;
+  font-weight: bold;
 }
 
 .btn-primary{
-  color: white;
+  /* color: white; */
+  background-color: blue
 }
 
 .center {
