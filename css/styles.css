@@ -40,10 +40,11 @@
 #footer{
   margin: auto;
   padding: 5px;
-  min-height: 75px;
+  min-height: 25px;
   overflow:hidden;
   background-color: black;
 }
+
 .btn {
   color: white;
 }
@@ -59,24 +60,24 @@
 }
 
 .image{
-  height: 140px;
+  /* height: 140px; */
+  margin: auto;
+  padding: 5px;
+  min-height: 25px;
+  overflow:hidden;
   background-color: black;
 }
+
+
 
 .text-center{
   color: white;
   margin: auto;
   font-weight: bold;
   padding: 5px;
-  min-height: 75px;
+  min-height: 25px;
   overflow:hidden;
 }
-
-/* .vertcenter {
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
-} */
 
 .general_body {
   height:600px;
