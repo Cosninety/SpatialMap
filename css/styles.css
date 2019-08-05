@@ -101,7 +101,7 @@ body{
 
 /* adapted from Advanced Styling and Responsive Design Code with Me Navigation Coursera lecture  */
 /* I am not using mobile first principles, hence I am basing media query of max-width instead of min width...I also relied more heavily ob=n bootstrap for responsive design */
-@media all and (max-width:900px){
+@media all and (max-width:600px){
 
   #side_panel {
     display: block;
